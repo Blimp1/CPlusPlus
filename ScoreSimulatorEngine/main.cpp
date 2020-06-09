@@ -7,27 +7,29 @@ using namespace std;
 map<string, int> teamsh;
 vector<string> teams;
 
+int scorearray [] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,6,6,6,7,7};
+
 class Engine
 {
     public:
     void add (){
     srand(time(0));
-    teamsh["Arsenal"] = (rand() % 7) + 0;
-    teamsh["Liverpool"] = (rand() % 7) + 0;
-    teamsh["Napoli"] = (rand() % 7) + 0;
-    teamsh["Juventus"] = (rand() % 7) + 0;
-    teamsh["Real Madrid"] = (rand() % 7) + 0;
-    teamsh["Barcelona"] = (rand() % 7) + 0;
-    teamsh["Porto"] = (rand() % 7) + 0;
-    teamsh["Benfica"] = (rand() % 7) + 0;
-    teamsh["Rangers"] = (rand() % 7) + 0;
-    teamsh["Celtic"] = (rand() % 7) + 0;
-    teamsh["Bayern"] = (rand() % 7) + 0;
-    teamsh["Dortmund"] = (rand() % 7) + 0;
-    teamsh["PSG"] = (rand() % 7) + 0;
-    teamsh["Lyon"] = (rand() % 7) + 0;
-    teamsh["Ajax"] = (rand() % 7) + 0;
-    teamsh["PSV"] = (rand() % 7) + 0;
+    teamsh["Arsenal"] = scorearray[(rand() % 99) + 0];
+    teamsh["Liverpool"] = scorearray[(rand() % 99) + 0];
+    teamsh["Napoli"] = scorearray[(rand() % 99) + 0];
+    teamsh["Juventus"] = scorearray[(rand() % 99) + 0];
+    teamsh["Real Madrid"] = scorearray[(rand() % 99) + 0];
+    teamsh["Barcelona"] = scorearray[(rand() % 99) + 0];
+    teamsh["Porto"] = scorearray[(rand() % 99) + 0];
+    teamsh["Benfica"] = scorearray[(rand() % 99) + 0];
+    teamsh["Rangers"] = scorearray[(rand() % 99) + 0];
+    teamsh["Celtic"] = scorearray[(rand() % 99) + 0];
+    teamsh["Bayern"] = scorearray[(rand() % 99) + 0];
+    teamsh["Dortmund"] = scorearray[(rand() % 99) + 0];
+    teamsh["PSG"] = scorearray[(rand() % 99) + 0];
+    teamsh["Lyon"] = scorearray[(rand() % 99) + 0];
+    teamsh["Ajax"] = scorearray[(rand() % 99) + 0];
+    teamsh["PSV"] = scorearray[(rand() % 99) + 0];
 
     teams.push_back("Arsenal");
     teams.push_back("Juventus");
@@ -52,9 +54,6 @@ class Engine
     teams.erase(teams.begin()+x);
     };
 
-    
-
-
 };
 
 int main() 
@@ -71,16 +70,5 @@ srand(time(0));
     int a = (rand() % teams.size()) + 0;
     cout<< teamsh[teams[a]] << " " << teams[a] << endl;
     eo.del(a);
-    
-    
-
-    //for (int i=0; i < teams.size(); i++){
-    //cout<<teams[i]<<endl;
-    //};
-
-    //cout<<"\n"<<endl;
-
   };
-
-  
 }
